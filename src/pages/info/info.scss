@@ -1,0 +1,58 @@
+page-info {
+
+}
+b,p{
+padding-left: 10px;
+}
+
+
+
+h5{
+    text-align: right;
+}
+ion-icon {
+    color:#e8a406;
+}
+.card-md{
+    height: 100%;
+    border-radius: 20px;
+}
+
+ion-select::-ms-expand{
+display:none;
+}
+
+
+
+.select-icon {
+		visibility: hidden;
+	}
+
+  .button {
+  width: 30%;
+  border-radius: 100px;
+ background-color: #e8a406;
+vertical-align: middle;
+    }
+
+.save {
+  width: 30%;
+  border-radius: 100px;
+  //color:#e8a406;
+ background-color: #e8a406;
+vertical-align: middle;
+    }
+
+.name{
+    font-size: 14pt;
+    float:left;
+}
+
+.skip{
+   
+    float:right;
+      font-size: 14pt;
+    
+}
+
+

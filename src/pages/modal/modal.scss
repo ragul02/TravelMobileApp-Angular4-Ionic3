@@ -1,0 +1,40 @@
+page-modal {
+
+}
+
+ion-content{
+   background-color: white;
+    
+}
+
+ion-option{
+  display:none;
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.text-input::-moz-placeholder {
+  color: white;
+  font-size: 20px;
+ 
+}
+
+.text-input:-ms-input-placeholder {
+  color: white;
+    font-size: 20px;
+}
+
+.text-input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: white;
+    font-size: 20px;
+}
+ion-input{
+     border-bottom: 0.5px solid map-get($colors, primary);
+border-bottom-color: white;
+margin-left: 10px;
+margin-right: 50px;
+}
+ 

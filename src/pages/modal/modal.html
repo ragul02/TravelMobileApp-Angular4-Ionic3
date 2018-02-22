@@ -1,0 +1,62 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+  <!--<ion-grid>-->
+  <!--<ion-row>-->
+  <!--<ion-col>
+         <ion-icon class="icon-arrow_left" style="color:white;float: left" item-left ></ion-icon>
+      </ion-col>
+      <ion-col >
+       <h3 style="color:dimgrey;float: left">New Trip</h3>
+      </ion-col>
+      <ion-col >
+        <h4 >Save  </h4>
+      </ion-col>-->
+  <div>
+    <ion-icon class="icon-arrow_left" style="color:dimgrey;float:left;font-size:14pt" (click)="back()"></ion-icon>
+  </div>
+  <div>
+    <p style="color:dimgrey;margin-left:10px;font-size:14pt;float:left;">New Trip</p>
+  </div>
+  <div style="float:right;font-size: 14pt;color:dimgrey;">
+    <h4> Save</h4>
+  </div>
+  <!--</ion-row>-->
+  <!--</ion-grid>-->
+  <ion-card style="padding-top:20px;width:500px;margin:auto;height: 500px;">
+    <ion-icon class="icon-close" (click)="closeModal()" style="float:right;font-size:30px;margin-right:10px;"></ion-icon>
+    <h1 style="margin-left: 10px;">Book for</h1>
+
+    <ion-list style="padding-bottom: 5px;padding-top: 5px;">
+      <p style="font-size: 20px;">self</p>
+    </ion-list>
+    <ion-list style="padding-bottom: 5px;padding-top: 5px;">
+      <p style="font-size: 20px;">Raja Shanker</p>
+    </ion-list>
+    <ion-list style="padding-bottom: 5px;padding-top: 5px;">
+      <p style="font-size: 20px;">Vijendra Sahu</p>
+    </ion-list>
+
+    <ion-card style="    background-color: #e8a406;padding-top: 20px;margin-left: 0px;width: 500px;">
+      <h1 align="center" style="color: white;margin-top:20px;"> Book for Employee</h1>
+      <!--<ion-item>-->
+
+
+
+      <ion-input type="text" placeholder="Employee Number" style="color: white;">
+        <ion-icon class="icon-arrow_right" style="color:white"></ion-icon>
+      </ion-input>
+      <!--</ion-item>      -->
+
+    </ion-card>
+
+  </ion-card>
+
+
+</ion-content>

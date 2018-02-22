@@ -1,0 +1,279 @@
+<ion-content padding>
+  <div>
+    <ion-icon class="icon-arrow_left" style="color:dimgrey;float:left;font-size:14pt" (click)="back()"></ion-icon>
+  </div>
+  <div>
+    <p style="color:dimgrey;margin-left:10px;font-size:14pt;float:left;">myTravel</p>
+  </div>
+  <div style="float:right;font-size: 20px;">
+    <ion-icon class="icon-user_id"></ion-icon>
+    <ion-icon class="icon-settings"></ion-icon>
+    <!--      item-right -->
+    <ion-icon class="icon-help"></ion-icon>
+  </div>
+
+
+
+  <h3 align="center">Hi, Julie</h3>
+
+  <div class="book_for" (click)="onclick()">
+    <span style="font-size:14pt;margin-left:100px;margin-top:10px;">Book for</span>
+    <ion-icon style="font-size:14pt;margin-left:100px;margin-top:10px;" class="icon-arrow_drop_down" item-right></ion-icon>
+
+    <!--<ion-select placeholder="Book for" (click)="onclick()" [(ngModel)]="Book_for" #select>
+  </ion-select>-->
+  </div>
+
+
+  <!--grid start-->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="new_trip">
+          <ion-icon class="icon-flight_takeoff" (click)="newtrip()" item-left></ion-icon>
+
+          <h2>NEW TRIP</h2>
+        </ion-card>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-card class="my_trip">
+          <ion-icon class="icon-business" item-left></ion-icon>
+
+          <h2> MY TRIPS</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+    <!--Ongoing Trip start-->
+
+    <h3 align="center" style="color:dimgrey"> Ongoing trip</h3>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item-sliding (ionSwipe)="delete(item)" style="height:180px;border-radius: 10px;padding:0px;">
+            <ion-item style="width:500px;height:180px;border-radius: 0px">
+
+              <div style="float: left;margin-top:10px">
+                <p class="date">{{this.Date}}</p><br>
+                <ion-icon class="icon-flight_takeoff" style="font-size:20px;margin-left:10px;" item-left></ion-icon>
+                <p class="city"> {{this.dep_details.code}} </p>
+                <p class="trnst_text"> {{this.dep_details.city}} <br> {{this.dep_details.time}} </p>
+
+              </div>
+
+              <div>
+                <hr style="border-top:  dashed  #e8a406; width:25%;float:left;margin-top:80px;" />
+              </div>
+
+
+              <div style="float: right;margin-top:0px;margin-left:auto;height:180px;width:20px;padding:0px;background-color: #e8a406">
+                <ion-icon class="icon-arrow_left" style="font-size:20px;color: white;margin-top:80px"></ion-icon>
+
+              </div>
+
+
+              <div style="float: right;margin-top:10px">
+                <p class="date">{{this.Date}}</p><br>
+                <ion-icon class="icon-flight_landing" style="font-size:20px;margin-left:50px" item-middle></ion-icon>
+                <p class="city rght_align"> {{this.arrival_details.code}}</p>
+                <p class="trnst_text rght_align">{{this.arrival_details.city}} <br> {{this.arrival_details.time}}</p>
+              </div>
+
+            </ion-item>
+
+            <ion-item-options class="ion-item-options">
+
+              <ion-icon class="icon-delete  ion_item_icons"></ion-icon>
+
+              <ion-icon class="icon-edit  ion_item_icons"></ion-icon>
+
+              <ion-icon class="icon-circle_add ion_item_icons"></ion-icon>
+            </ion-item-options>
+
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!--Ongoing Trip end-->
+
+
+
+    <!--Upcoming Trip start-->
+    <h3 align="center" style="color:dimgrey;margin-top:50px"> Upcoming trip</h3>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item-sliding (ionSwipe)="delete(item)" style="height:180px;border-radius: 10px;padding:0px;">
+            <ion-item style="width:500px;height:180px;border-radius: 0px">
+
+              <div style="float: left;margin-top:10px">
+                <p class="date">{{this.Date}}</p><br>
+                <ion-icon class="icon-flight_takeoff" style="font-size:20px;margin-left:10px;" item-left></ion-icon>
+                <p class="city"> {{this.dep_details.code}} </p>
+                <p class="trnst_text"> {{this.dep_details.city}} <br> {{this.dep_details.time}} </p>
+
+              </div>
+
+              <div>
+                <hr style="border-top:  dashed  #e8a406; width:25%;float:left;margin-top:80px;" />
+              </div>
+
+
+              <div style="float: right;margin-top:0px;margin-left:auto;height:180px;width:20px;padding:0px;background-color: #e8a406">
+                <ion-icon class="icon-arrow_left" style="font-size:20px;color: white;margin-top:80px"></ion-icon>
+
+              </div>
+
+
+              <div style="float: right;margin-top:10px">
+                <p class="date">{{this.Date}}</p><br>
+                <ion-icon class="icon-flight_landing" style="font-size:20px;margin-left:50px" item-middle></ion-icon>
+                <p class="city rght_align"> {{this.arrival_details.code}}</p>
+                <p class="trnst_text rght_align">{{this.arrival_details.city}} <br> {{this.arrival_details.time}}</p>
+              </div>
+
+            </ion-item>
+            <ion-item-options class="ion-item-options">
+
+              <ion-icon class="icon-delete  ion_item_icons"></ion-icon>
+
+              <ion-icon class="icon-edit  ion_item_icons"></ion-icon>
+
+              <ion-icon class="icon-circle_add ion_item_icons"></ion-icon>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <!--Upcoming Trip end-->
+
+  </ion-grid>
+
+</ion-content>
+
+
+
+<!--
+<h3 align="center" style="color: white;" > Ongoing trip</h3>
+
+<ion-card style="width:500px; height:  180px; border-radius: 10px;margin:auto">
+
+
+<div style="float: left;margin-top:0px;margin-right: 0px;">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_takeoff" style="font-size:20px;margin-left:10px;" item-left ></ion-icon>
+<p class="city"> {{this.dep_details.code}} </p>
+<p class="trnst_text"> {{this.dep_details.city}} <br> {{this.dep_details.time}} </p>
+</div>
+
+<div style="margin: 0 auto;">
+<hr style="border-top:  dashed #e8a406; width:30%;float:left;margin-top:100px;" />
+</div>
+
+<div style="float:right;margin-top:0px; margin-left:5px;margin-right:5px;">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_landing" style="font-size:20px;margin-left:50px" item-middle ></ion-icon>
+<p class="city rght_align"> {{this.arrival_details.code}}</p>
+<p class="trnst_text rght_align">{{this.arrival_details.city}} <br> {{this.arrival_details.code}}</p>
+</div>
+
+
+</ion-card>
+
+<h3>Upcoming Trip</h3>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card style="width:500px; height:  180px; border-radius: 10px;margin:auto">
+
+
+<div style="float: left;margin-top:px;margin-right: 0px;height:180px;width:160px">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_takeoff" style="font-size:20px;margin-left:10px;" item-left ></ion-icon>
+<p class="city"> {{this.dep_details.code}} </p>
+<p class="trnst_text"> {{this.dep_details.city}} <br> {{this.dep_details.time}} </p>
+</div>
+
+<div style="background-color: #e8a406;float: right;margin-top:0px;margin-right: 0px;height:180px;width:20px">
+<ion-icon class="icon-arrow_left" onclick="showHide = !showHide" style="font-size:20px;color: white;margin-top:80px" item-left ></ion-icon>
+
+</div>
+
+
+<div style="float: right;margin-top:0px;margin-right: 0px;height:180px;width:160px">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_landing" style="font-size:20px;margin-left:50px" item-middle ></ion-icon>
+<p class="city rght_align"> {{this.arrival_details.code}}</p>
+<p class="trnst_text rght_align">{{this.arrival_details.city}} <br> {{this.arrival_details.code}}</p>
+</div>
+
+
+
+<div style="float: right;margin-top:0px;margin-right: 0px;height:180px;width:160px">
+<hr style="border-top:  dashed #e8a406; width:100%;float:left;margin-top:80px;" />
+</div>
+
+
+</ion-card>
+</ion-col>
+</ion-row>
+
+<br><br>
+
+
+
+
+<ion-row>
+  <ion-col>
+    <ion-list>
+      <ion-item-sliding (ionSwipe)="delete(item)" style="height:180px;border-radius: 10px;padding:0px;">
+<ion-item style="width:500px;height:180px;border-radius: 0px">
+
+<div style="float: left;margin-top:10px">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_takeoff" style="font-size:20px;margin-left:10px;" item-left ></ion-icon>
+<p class="city"> {{this.dep_details.code}} </p>
+<p class="trnst_text"> {{this.dep_details.city}} <br> {{this.dep_details.time}} </p>
+
+</div>
+
+<div>
+  <hr style="border-top:  dashed  #e8a406; width:25%;float:left;margin-top:80px;" />
+</div>
+
+
+<div style="float: right;margin-top:0px;margin-left:auto;height:180px;width:20px;padding:0px;background-color: #e8a406">
+<ion-icon class="icon-arrow_left" style="font-size:20px;color: white;margin-top:80px"></ion-icon>
+
+</div>
+
+
+<div style="float: right;margin-top:10px">
+<p class="date">{{this.Date}}</p><br>
+<ion-icon class="icon-flight_landing" style="font-size:20px;margin-left:50px" item-middle ></ion-icon>
+<p class="city rght_align"> {{this.arrival_details.code}}</p>
+<p class="trnst_text rght_align">{{this.arrival_details.city}} <br> {{this.arrival_details.time}}</p>
+</div>
+
+</ion-item>
+<ion-item-options class="ion-item-options">
+
+  <ion-icon class="icon-delete  ion_item_icons"></ion-icon>
+
+  <ion-icon class="icon-edit  ion_item_icons"></ion-icon>
+
+  <ion-icon class="icon-circle_add ion_item_icons"></ion-icon>
+</ion-item-options>
+</ion-item-sliding>
+</ion-list>
+</ion-col>
+</ion-row>-->

@@ -1,0 +1,87 @@
+<ion-content padding>
+  <div>
+    <span class="name">Hi,Julie</span>
+
+    <span class="skip" (click)="skip()">skip</span>
+  </div>
+
+  <ion-card>
+    <p>Set your preference for a better travel experience.</p>
+    <br>
+
+    <b>Contact Number</b>
+    <ion-item>
+      <ion-input placeholder="+91   Enter your travel mobile number"> </ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+    </ion-item>
+
+    <b>Emergency Contact Number</b>
+    <ion-item>
+
+      <ion-input placeholder="+91 Number of your contact "></ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+
+    </ion-item>
+
+    <b>Seat Preference</b>
+    <ion-item>
+      <ion-icon class="icon-seat2" item-left></ion-icon>
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Select you seat" [(ngModel)]="seat">
+        <ion-option value="window">Window-seat</ion-option>
+        <ion-option value="middle">Middle</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <b>Meal Preference</b>
+    <ion-item>
+      <ion-icon class="icon-food" item-left></ion-icon>
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Select you meal" [(ngModel)]="seat">
+        <ion-option value="Veg">Veg</ion-option>
+        <ion-option value="Non-veg">Non-veg</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <b>Preferred Airline</b>
+    <ion-item>
+
+      <ion-icon class="icon-flight" item-left></ion-icon>
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Select airline" [(ngModel)]="seat">
+        <ion-option value="AirIndia">AirIndia</ion-option>
+        <ion-option value="JetAirways">JetAirways</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <b>Frequent flier</b>
+    <ion-item>
+      <ion-icon class="icon-file_document" item-left></ion-icon>
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Enter your Frequent flier number" [(ngModel)]="seat">
+        <ion-option value="QWE1232TTW">QWE1232TTW</ion-option>
+        <ion-option value="GJH4332WDH">GJH4332WDH</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <b>Do you require special assistance?</b>
+    <ion-item>
+      <ion-icon class="icon-disability" item-left></ion-icon>
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Select assistance you require" [(ngModel)]="seat">
+        <ion-option value="A">A</ion-option>
+        <ion-option value="B">B</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <div text-center>
+      <button ion-button style="background-color:#e8a406;border-radius: 50px;" class="save" [navPush]="pushPage">SAVE</button>
+
+
+    </div>
+
+  </ion-card>
+
+</ion-content>

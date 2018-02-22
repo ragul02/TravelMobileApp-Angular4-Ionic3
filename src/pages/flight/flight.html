@@ -1,0 +1,177 @@
+<!-- <ion-content padding>
+  <ion-card style="width:800px;margin:auto;height:800px;">
+<ion-grid>
+    <b>From</b>
+    <ion-item>
+      <ion-input placeholder="Bengaluru"></ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+    </ion-item>
+    <br>
+    <b>To</b>
+    <ion-item>
+      <ion-input placeholder="Mumbai"></ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input></ion-input>
+      <ion-icon class="icon-calendar" item-right (click)="pickdate()"></ion-icon>
+    </ion-item>
+
+
+    <ion-list radio-group>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label style="color:black">Self</ion-label>
+            <ion-radio checked="true" value="Self">Self</ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label style="color:black">Company</ion-label>
+            <ion-radio value="Company">Company</ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-list>
+    <ion-list radio-group>
+    <ion-radio value="self">self</ion-radio>
+    <ion-radio value="Company">Company</ion-radio>
+    </ion-list>
+
+
+
+    <ion-icon class="icon-circle_add"></ion-icon>
+    <ion-label>Add Another Trip</ion-label>
+
+    <b>Purpose of Travel</b>
+    <ion-item>
+
+      <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+      <ion-select placeholder="Select you purpose of Travel" [(ngModel)]="purpose">
+        <ion-option value="A">A</ion-option>
+        <ion-option value="B">B</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <div>
+      <ion-radio >iOS</ion-radio>
+      <ion-radio >Android</ion-radio>
+      <ion-radio >Windows Phone</ion-radio>
+    </div>
+  
+
+  
+
+    <b>Travel Invitation</b>
+    <ion-item>
+      <ion-input type="text" placeholder="Upload Your Travel Invitation"> </ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+    </ion-item>
+
+
+    <div text-center>
+      <button ion-button style="background-color:#e8a406;border-radius: 50px;" class="next">NEXT</button>
+    </div>
+</ion-grid>
+   </ion-card>
+</ion-content> -->
+
+<ion-content>
+  <ion-card style="height:1000px;width:700px;margin:auto">
+
+    <b>From</b>
+    <ion-item>
+      <ion-input placeholder="Bengaluru"></ion-input>
+      <ion-icon class="icon-mobile" item-right></ion-icon>
+    </ion-item>
+    <br>
+
+    <b>To</b>
+    <ion-item>
+      <ion-input placeholder="mumbai"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-row style="margin-left:100px;margin-top:20px">
+      <ion-col>
+        <span>Departure date</span>
+        <ion-item>
+          <ion-input>Departure date</ion-input>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate">
+          </ion-datetime>
+          <ion-icon class="icon-calendar" item-right></ion-icon>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+        <span>Return date</span>
+        <ion-item>
+          <ion-input>Return date</ion-input>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate">
+          </ion-datetime>
+          <ion-icon class="icon-calendar" item-right></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <h2 style="font-weight:bold;float:left;margin-left:10px">Booking Type</h2>
+    <ion-grid>
+      <!-- <ion-list radio-group> -->
+      <ion-row radio-group>
+        <!-- <ion-col>
+           <ion-list>
+             <ion-item> -->
+        <ion-label checked="true" style="color:black">Self</ion-label>
+        <ion-radio value="self" style="float:right;margin-left:0px;">self</ion-radio>
+        <!-- </ion-item>
+           </ion-list>
+          </ion-col> -->
+        <ion-col>
+
+          <ion-label style="color:black">Company</ion-label>
+          <ion-radio value="self" style="float:right">Company</ion-radio>
+        </ion-col>
+      </ion-row>
+      <!-- </ion-list> -->
+
+      <ion-row style="margin-left:350px;margin-top:30px">
+        <ion-icon class="icon-circle_add" style="color:#e8a406"></ion-icon>
+        <!-- <ion-label style="color:black;margin-left:0px">Add Another Trip</ion-label> -->
+        <span style="color:black;margin-left:0px">Add Another Trip</span>
+
+      </ion-row>
+
+
+
+
+      <b style="font-weight:bold;float:left;margin-left:10px">Purpose of Travel</b>
+      <ion-item>
+
+        <ion-icon class="icon-arrow_drop_down" item-right></ion-icon>
+        <ion-select placeholder="Select you purpose of Travel" [(ngModel)]="purpose">
+          <ion-option value="A">A</ion-option>
+          <ion-option value="B">B</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+
+      <b style="font-weight:bold;float:left;margin-left:10px">Travel Invitation</b>
+      <ion-item>
+        <ion-input placeholder="Upload your travel invitation"> </ion-input>
+        <ion-icon class="icon-doc_upload" item-right></ion-icon>
+      </ion-item>
+
+
+      <div text-center>
+        <button ion-button style="background-color:#e8a406;border-radius: 50px;" class="next">NEXT</button>
+      </div>
+
+
+    </ion-grid>
+  </ion-card>
+
+</ion-content>
